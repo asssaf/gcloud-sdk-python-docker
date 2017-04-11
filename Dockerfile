@@ -11,3 +11,4 @@ RUN wget ${sdk_url} -O - | tar xz
 ENV PATH="$PATH:/home/user/google-cloud-sdk/bin"
 
 RUN gcloud components install alpha
+RUN gcloud components install app-engine-python
