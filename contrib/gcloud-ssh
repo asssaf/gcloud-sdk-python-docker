@@ -1,0 +1,2 @@
+gcloud compute ssh --ssh-key-file=/home/user/.config/gcloud/google_compute_engine $*
+
