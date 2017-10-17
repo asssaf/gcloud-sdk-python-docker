@@ -24,9 +24,8 @@ ARG uid=1000
 RUN apk add --no-cache openssh-client
 
 RUN adduser -D -u $uid -G users user
+COPY --chown=1000:100 --from=builder /tmp/home/user/ /home/user/
 
-COPY --from=builder /tmp/home/user/ /home/user/
 ENV PATH="$PATH:/home/user/google-cloud-sdk/bin"
-
 WORKDIR /home/user
 USER user
